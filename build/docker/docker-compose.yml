@@ -1,0 +1,9 @@
+version: '3'
+networks:backbone
+services:
+    webserver:
+        image: nginx
+        networks: backbone
+    ssl:
+        image: quay.io/letsencrypt/letsencrypt
+        volume:
